@@ -3,120 +3,151 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/reset.css">
     <link rel="stylesheet" href="/css/style.min.css">
     <title>Gift Store</title>
 </head>
 <body>
     <div class="page">
         <header class="header">
-            <div class="header__item">
-                <div class="logo">logo</div>
-            </div>
-            <div class="header__item">
-                <ul class="nav">
-                    <li class="nav__item"><a href="" class="nav__link">Home</a></li>
-                    <li class="nav__item"><a href="" class="nav__link">About Us</a></li>
-                    <li class="nav__item"><a href="" class="nav__link">Services</a></li>
-                    <li class="nav__item"><a href="" class="nav__link">Blogs</a></li>
-                </ul>
-            </div>
-            <div class="header__item">
-                <button class="button header__button">gift finder</button>
+            <div class="wrapper">
+                <div class="header__item">
+                    <a href="" class="logo">logo</a>
+                </div>
+                <div class="header__item">
+                    <ul class="nav">
+                        <li class="nav__item"><a href="" class="nav__link">Home</a></li>
+                        <li class="nav__item"><a href="" class="nav__link">About Us</a></li>
+                        <li class="nav__item"><a href="" class="nav__link">Services</a></li>
+                        <li class="nav__item"><a href="" class="nav__link">Blogs</a></li>
+                    </ul>
+                </div>
+                <div class="header__item">
+                    <button class="button header__button">gift finder</button>
+                </div>
             </div>
         </header>
         <section class="find">
             <div class="find__item">
-                <div class="find__title"><h1>Find a gift for your wife or girlfriend</h1></div>
-                <div class="find__description">Struggling to find a gift for your wife or girlfriend? No problem!</div>
-                <div class="button find__button">find gift now</div>
+                <div class="wrapper">
+                    <div class="find__title"><h1>Find a gift for your wife or girlfriend</h1></div>
+                    <div class="find__description">Struggling to find a gift for your wife or girlfriend? No problem!</div>
+                    <button class="button find__button">find gift now</button>
+                </div>
+                
             </div>
-            <div class="find__item"><img src="../img/couple.svg" alt=""></div>
+            <div class="find__item"></div>
         </section>
         <section class="more">
             <div class="more__item"></div>
             <div class="more__item">
-                <div class="more__title">How we work</div>
-                <div class="more__description">We’ve actually already asked hundreds of women what they want, and made a database with the results. All you have to do is take our short survey that only takes seconds, and our proprietary algorithm will match you with a few perfect gift options.</div>
-                <div class="button more__button">Learn More</div>
+                <div class="wrapper">
+                    <div class="more__title">How we work</div>
+                    <div class="more__description">We’ve actually already asked hundreds of women what they want, and made a database with the results. All you have to do is take our short survey that only takes seconds, and our proprietary algorithm will match you with a few perfect gift options.</div>
+                    <button class="button more__button">Learn More</button>
+                </div>
+                
             </div>
         </section>
         <section class="gift">
-            <div class="h2 gift__h2">
-                <h2>Gifts for all Occasions</h2>
+            <div class="wrapper">
+                <div class="h2 gift__h2">
+                    <h2>Gifts for all Occasions</h2>
+                </div>
+                <div class="offer gift__offer">“Try our web app to find the best gifts for all occasions”</div>
+                <div class="gift__options">
+                    <div class="gift__item">
+                        <div class="gift__image gift1"></div>
+                        <div class="gift__occasion">Birthday</div>
+                        <div class="gift__more"><a href="">See More ›</a></div>
+                    </div>
+                    <div class="gift__item">
+                        <div class="gift__image gift2"></div>
+                        <div class="gift__occasion">Anniversary</div>
+                        <div class="gift__more"><a href="">See More ›</a></div>
+                    </div>
+                    <div class="gift__item">
+                        <div class="gift__image gift3"></div>
+                        <div class="gift__occasion">Valentine's Day</div>
+                        <div class="gift__more"><a href="">See More ›</a></div>
+                    </div>
+                    <div class="gift__item">
+                        <div class="gift__image gift4"></div>
+                        <div class="gift__occasion">Christmas</div>
+                        <div class="gift__more"><a href="">See More ›</a></div>
+                    </div>
             </div>
-            <div class="offer gift__offer">“Try our web app to find the best gifts for all occasions”</div>
-            <div class="gift__options">
-                <div class="gift__item">
-                    <div class="gift__image gift1"></div>
-                    <div class="gift__occasion">Birthday</div>
-                    <div class="gift__more"><a href="">See More ›</a></div>
-                </div>
-                <div class="gift__item">
-                    <div class="gift__image gift2"></div>
-                    <div class="gift__occasion">Anniversary</div>
-                    <div class="gift__more"><a href="">See More ›</a></div>
-                </div>
-                <div class="gift__item">
-                    <div class="gift__image gift3"></div>
-                    <div class="gift__occasion">Valentine's Day</div>
-                    <div class="gift__more"><a href="">See More ›</a></div>
-                </div>
-                <div class="gift__item">
-                    <div class="gift__image gift4"></div>
-                    <div class="gift__occasion">Christmas</div>
-                    <div class="gift__more"><a href="">See More ›</a></div>
-                </div>
+            
             </div>
         </section>
         <section class="sign">
-            <div class="sign__item"><span>Ready to get started?</span><br>Sign up or contact us</div>
             <div class="sign__item">
-                <div class="button sign__button sign__button_1">Find gift now</div>
-                <div class="button sign__button sign__button_2">how it works</div>
+                <div class="wrapper">
+                    <span>Ready to get started?</span><br>Sign up or contact us
+                </div>
+                </div>
+            <div class="sign__item">
+                <button class="button sign__button sign__button_1">Find gift now</button>
+                <button class="button sign__button sign__button_2">how it works</button>
             </div>
         </section>
         <section class="blog">
-            <div class="h2 blog__h2">
-                <h2>Our Best Blogs Ever</h2></div>
-                <div class="offer">“Try our blog to find the best tips and tricks to select your gift”</div>
-                <div class="blog__item">
-                    <div class="blog__image"></div>
-                    <div class="blog__title">
-                        <div class="blog__title_name">Mr. John Doe</div>
-                        <div class="blog__title_desc">The best way to wish your wife</div>
-                        <div class="blog__title_more"><a href="">Read More</a></div>
+            <div class="wrapper">
+                <div class="h2 blog__h2">
+                    <h2>Our Best Blogs Ever</h2></div>
+                    <div class="offer">“Try our blog to find the best tips and tricks to select your gift”</div>
+                    <div class="blog__item">
+                        <div class="blog__image"></div>
+                        <div class="blog__title">
+                            <div class="wrapper">
+                                <div class="blog__title_name">Mr. John Doe</div>
+                            <div class="blog__title_desc">The best way to wish your wife</div>
+                            <div class="blog__title_more"><a href="">Read More</a></div>
+                            </div>
+                            
+                        </div>
                     </div>
-                </div>
-                <div class="blog__list">
-                    <div class="article">
-                        <div class="article_name">Database to find the gifts for your girlfriend</div>
-                        <div class="article_desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore...</div>
-                        <div class="article_more">Read More</div>
+                    <div class="blog__list">
+                        <div class="article">
+                            <div class="article_name">Database to find the gifts for your girlfriend</div>
+                            <div class="article_desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore...</div>
+                            <div class="article_more">Read More</div>
+                        </div>
+                        <div class="article">
+                            <div class="article_name">How Artificial Intelligence read your mind to find the best gift</div>
+                            <div class="article_desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore...</div>
+                            <div class="article_more">Read More</div>
+                        </div>
                     </div>
-                    <div class="article">
-                        <div class="article_name">How Artificial Intelligence read your mind to find the best gift</div>
-                        <div class="article_desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore...</div>
-                        <div class="article_more">Read More</div>
-                    </div>
-                </div>
+            </div>
+            
         </section>
         <footer class="footer">
-            <div class class="footer__item">
+            <div class="wrapper">
+                <div class="footer__item">
                     <ul class="nav">
                         <li class="nav__item"><a href="" class="nav__link">Home</a></li>
                         <li class="nav__item"><a href="" class="nav__link">About Us</a></li>
                     </ul>
-                <div class="logo">logo</div>
+                <a href=""><div class="logo footer__logo">logo</div></a>
                 <ul class="nav">
                     <li class="nav__item"><a href="" class="nav__link">Services</a></li>
                     <li class="nav__item"><a href="" class="nav__link">Blogs</a></li>
                 </ul>
             </div>
-            <hr>
+            <div class="hr"></div>
             <div class="footer__item">
-                
+                <div class="footer__icon"><a href="" class="fb"></a></div>
+                <div class="footer__icon"><a href="" class="tw"></a></div>
+                <div class="footer__icon"><a href="" class="inst"></a></div>
+                <div class="footer__icon"><a href="" class="yt"></a></div>
+                <div class="footer__icon"><a href="" class="pint"></a></div>
             </div>
-            <div class="footer__item"></div>
+            <div class="footer__item">
+                <div class="footer__term-year">© 2010 — 2020</div>
+                <div class="footer__term-text">Privacy — Terms</div>
+            </div>
+            </div>
         </footer>
     </div>
 </body>
