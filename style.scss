@@ -32,6 +32,8 @@
 		url('../fonts/gilroy-bold.svg#gilroy-bold') format('svg'); /* Chrome < 4, Legacy iOS */
 }
 
+
+
 body {
     font-family: 'Gilroy-Regular';
 }
@@ -60,7 +62,10 @@ body {
 		margin-right: 31px;
 	}
 	.nav__link {
-		font-size: 18px;
+		font-size: 20px;
+		@include breakpoint (lg) {
+			font-size: 22px;
+		}
 	}
 	&__button {
 		color: $orange;
@@ -74,9 +79,12 @@ body {
 .logo {
     font-family: 'Homemade Apple', cursive;
     font-weight: 400;
-    font-size: 18px;
+    font-size: 1.125rem;
 	text-decoration: none;
 	color: black;
+	@include breakpoint (lg) {
+		font-size: 22px;
+	}
 }
 
 .nav {
@@ -93,7 +101,7 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	font-size: 18px;
+	font-size: 1.125rem;
 	border: 1px solid;
 	border-radius: 5px;
 }
@@ -102,6 +110,9 @@ body {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	grid-template-rows: 700px;
+	@include breakpoint (lg) {
+		grid-template-rows: 500px;
+	}
 	&__item:first-child {
 		background-color: $gray2;
 		display: flex;
@@ -114,28 +125,44 @@ body {
 		}
 	}
 	&__item:last-child {
-		background-image: url(../img/couple.svg);
+		background-image: url(../img/couple.jpg);
 		width: 100%;
 		height: 100%;
 		background-size: cover;
 		background-repeat: no-repeat;
-
+		background-position: center;
 	}
 	&__title {
 		font-family: 'Gilroy-SemiBold';
 		font-size: 56px;
 		margin-bottom: 36px;
+		line-height: 68px;
+		@include breakpoint (lg) {
+			font-size: 40px;
+			line-height: 40px;
+			margin-bottom: 20px;
+		}
 	}
 	&__description {
 		font-size: 20px;
 		margin-bottom: 52px;
 		line-height: 28px;
+		@include breakpoint (lg) {
+			font-size: 16px;
+			line-height: 25px;
+			margin-bottom: 30px;
+		}
 	}
 	&__button {
 		background-color: $orange;
 		color: #fff;
 		width: 200px;
 		height: 60px;
+		@include breakpoint (lg) {
+			width: 160px;
+			height: 50px;
+			font-size: 14px;
+		}
 	}
 }
 
@@ -143,9 +170,13 @@ body {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	grid-template-rows: 600px;
+	@include breakpoint (lg) {
+		grid-template-rows: 400px;
+	}
 	&__item:first-child {
 		background-image: url(../img/more.svg);
 		background-size: cover;
+		background-position: center;
 		width: 100%;
 		height: 100%;
 	}
@@ -153,27 +184,40 @@ body {
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		flex-direction: column;
 		background-color: $gray2;
 		.wrapper {
 			width: 60%;
-			height: 60%;
-			margin-top: 20%;
+			height: 80%;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-around;
 		}
 	}
 	&__title {
 		font-size: 32px;
 		margin-bottom: 23px;
+		@include breakpoint (lg) {
+			font-size: 25px;
+		}
 	}
 	&__description {
 		font-size: 20px;
 		margin-bottom: 35px;
 		line-height: 28px;
+		@include breakpoint (lg) {
+			font-size: 14px;
+			margin-bottom: 30px;
+		}
 	}
 	&__button {
 		width: 200px;
 		height: 60px;
 		color: $orange;
+		@include breakpoint (lg) {
+			width: 160px;
+			height: 50px;
+			font-size: 14px;
+		}
 	}
 }
 
@@ -188,6 +232,10 @@ body {
 }
 
 .gift {
+	height: 770px;
+	@include breakpoint (lg) {
+		height: 670px;
+	}
 	&__options {
 		display: grid;
 		grid-template-columns: repeat(4, 1fr);
@@ -202,14 +250,18 @@ body {
 		flex-direction: column;
 		align-items: center;
 		margin: 60px auto;
+		
 	}
 	&__item {
-		width: 270px;
-		height: 436px;
+		width: 100%;
+		height: 100%;
 		background-color: $gray1;
 		&:hover {
 			background-color: #fff;
 			box-shadow: 0 0 40px rgba(0, 0, 0, 0.05);
+		}
+		@include breakpoint (lg) {
+			display: flex;
 		}
 	}
 	&__image {
@@ -249,7 +301,6 @@ body {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	grid-template-rows: 240px;
-	margin-top: 140px;
 	&__item:first-child {
 		display: flex;
 		justify-content: center;
@@ -258,6 +309,10 @@ body {
 		.wrapper {
 			width: 50%;
 			height: 30%;
+			@include breakpoint (lg) {
+				width: 60%;
+				height: 30%;
+			}
 			span {
 				font-family: 'Gilroy-Bold';
 				font-size: 32px;
@@ -336,6 +391,7 @@ body {
 	&__list {
 		display: flex;
 		justify-content: space-between;
+		gap: 30px;
 		height: 290px;
 	}
 	&__h2 {
@@ -344,10 +400,19 @@ body {
 }
 
 .article {
-	padding: 48px;
 	margin-top: 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	&:hover {
 		box-shadow: 0 0 40px rgba(0, 0, 0, 0.05);
+	}
+	.wrapper {
+		width: 80%;
+		height: 80%;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
 	}
 	&_name {
 		font-size: 24px;
@@ -356,7 +421,6 @@ body {
 	&_desc {
 		font-size: 18px;
 		margin-top: 16px;
-		margin-bottom: 16px;
 	}
 }
 
@@ -371,6 +435,9 @@ a {
 	justify-content: center;
 	align-items: flex-end;
 	margin-top: 80px;
+	@include breakpoint (lg) {
+		margin-top: 40px;
+	}
 	.wrapper {
 		width: 80%;
 		height: 80%;
@@ -390,6 +457,9 @@ a {
 			&__link {
 				font-size: 14px;
 				font-family: 'Gilroy-Bold';
+				@include breakpoint (lg) {
+					font-size: 22px;
+				}
 			}
 		}
 		.nav__item:not(:last-child) {
@@ -398,6 +468,9 @@ a {
 	}
 	&__logo {
 		color: $orange;
+		@include breakpoint (lg) {
+			font-size: 22px;
+		}
 	}
 	&__icon {
 		&:not(:last-child) {
