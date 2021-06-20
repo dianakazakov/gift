@@ -242,6 +242,10 @@ body {
 		grid-template-rows: 440px;
 		gap: 30px;
 		margin-top: 60px;
+		@include breakpoint (lg) {
+			grid-template-columns: repeat(2, 1fr);
+			grid-template-rows: repeat(2, 200px);
+		}
 	}
 	.wrapper {
 		width: 80%;
@@ -267,6 +271,7 @@ body {
 	&__image {
 		width: 270px;
 		height: 270px;
+		background-size: cover;
 		&.gift1 {
 			background-image: url(../img/gift1.svg);
 		}
@@ -278,6 +283,10 @@ body {
 		}
 		&.gift4 {
 			background-image: url(../img/gift4.svg);
+		}
+		@include breakpoint (lg) {
+			width: 200px;
+			height: 200px;
 		}
 	}
 	&__occasion {
