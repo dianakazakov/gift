@@ -32,7 +32,11 @@
 		url('../fonts/gilroy-bold.svg#gilroy-bold') format('svg'); /* Chrome < 4, Legacy iOS */
 }
 
-
+:root {
+	@include breakpoint (md) {
+		font-size: 12px;
+	}
+}
 
 body {
     font-family: 'Gilroy-Regular';
@@ -43,6 +47,12 @@ body {
     justify-content: center;
 	align-items: center;
 	height: 116px;
+	@include breakpoint (md) {
+		height: 90px;
+	}
+	@include breakpoint (sm) {
+		height: 70px;
+	}
 	.wrapper {
 		height: 50%;
 		width: 90%;
@@ -56,6 +66,9 @@ body {
 		}
 		&:last-child {
 			margin-right: 40px;
+			@include breakpoint (sm, md) {
+				margin-right: 0;
+			}
 		}
 	}
 	.nav__item:not(:last-child) {
@@ -73,13 +86,22 @@ body {
 		width: 150px;
 		height: 45px;
 		background-color: #fff;
+		@include breakpoint (md) {
+			width: 120px;
+			height: 35px;
+		}
+	}
+	&__nav {
+		@include breakpoint (md) {
+			display: none;
+		}
 	}
 }
 
 .logo {
     font-family: 'Homemade Apple', cursive;
     font-weight: 400;
-    font-size: 1.125rem;
+    font-size: 18px;
 	text-decoration: none;
 	color: black;
 	@include breakpoint (lg) {
@@ -113,6 +135,9 @@ body {
 	@include breakpoint (lg) {
 		grid-template-rows: 500px;
 	}
+	@include breakpoint (md) {
+		grid-template-rows: 300px;
+	}
 	&__item:first-child {
 		background-color: $gray2;
 		display: flex;
@@ -142,6 +167,11 @@ body {
 			line-height: 40px;
 			margin-bottom: 20px;
 		}
+		@include breakpoint (md) {
+			font-size: 20px;
+			line-height: 20px;
+			margin-bottom: 20px;
+		}
 	}
 	&__description {
 		font-size: 20px;
@@ -150,6 +180,11 @@ body {
 		@include breakpoint (lg) {
 			font-size: 16px;
 			line-height: 25px;
+			margin-bottom: 30px;
+		}
+		@include breakpoint (md) {
+			font-size: 14px;
+			line-height: 19px;
 			margin-bottom: 30px;
 		}
 	}
@@ -161,7 +196,10 @@ body {
 		@include breakpoint (lg) {
 			width: 160px;
 			height: 50px;
-			font-size: 14px;
+		}
+		@include breakpoint (md) {
+			width: 130px;
+			height: 35px;
 		}
 	}
 }
@@ -172,6 +210,9 @@ body {
 	grid-template-rows: 600px;
 	@include breakpoint (lg) {
 		grid-template-rows: 400px;
+	}
+	@include breakpoint (md) {
+		grid-template-rows: 300px;
 	}
 	&__item:first-child {
 		background-image: url(../img/more.svg);
@@ -199,6 +240,9 @@ body {
 		@include breakpoint (lg) {
 			font-size: 25px;
 		}
+		@include breakpoint (md) {
+			font-size: 20px;
+		}
 	}
 	&__description {
 		font-size: 20px;
@@ -207,6 +251,11 @@ body {
 		@include breakpoint (lg) {
 			font-size: 14px;
 			margin-bottom: 30px;
+		}
+		@include breakpoint (md) {
+			font-size: 14px;
+			line-height: 16px;
+			margin-bottom: 15px;
 		}
 	}
 	&__button {
@@ -217,6 +266,10 @@ body {
 			width: 160px;
 			height: 50px;
 			font-size: 14px;
+		}
+		@include breakpoint (md) {
+			width: 130px;
+			height: 45px;
 		}
 	}
 }
@@ -236,6 +289,9 @@ body {
 	@include breakpoint (lg) {
 		height: 670px;
 	}
+	@include breakpoint (md) {
+		height: 570px;
+	}
 	&__options {
 		display: grid;
 		grid-template-columns: repeat(4, 1fr);
@@ -245,6 +301,12 @@ body {
 		@include breakpoint (lg) {
 			grid-template-columns: repeat(2, 1fr);
 			grid-template-rows: repeat(2, 200px);
+		}
+		@include breakpoint (md) {
+			grid-template-rows: repeat(2, 150px);
+		}
+		@include breakpoint (sm) {
+			grid-template-rows: repeat(4, 200px);
 		}
 	}
 	.wrapper {
@@ -267,6 +329,9 @@ body {
 		@include breakpoint (lg) {
 			display: flex;
 		}
+		@include breakpoint (sm) {
+			display: block;
+		}
 	}
 	&__image {
 		width: 270px;
@@ -288,6 +353,10 @@ body {
 			width: 200px;
 			height: 200px;
 		}
+		@include breakpoint (md) {
+			width: 150px;
+			height: 150px;
+		}
 	}
 	&__occasion {
 		font-size: 20px;
@@ -303,6 +372,22 @@ body {
 			color: black;
 		}
 	}
+	&__desc {
+		@include breakpoint (lg) {
+			width: 200px;
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-start;
+		}
+		@include breakpoint (md) {
+			width: 150px;
+			height: 150px;
+		}
+	}
+	&__h2 {
+		font-size: 25px;
+	margin-bottom: 20px;
+	}
 }
 
 .sign {
@@ -310,37 +395,56 @@ body {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	grid-template-rows: 240px;
+	@include breakpoint (md) {
+		grid-template-rows: 180px;
+	}
 	&__item:first-child {
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		flex-direction: column;
 		.wrapper {
-			width: 50%;
+			width: 60%;
 			height: 30%;
 			@include breakpoint (lg) {
-				width: 60%;
+				width: 80%;
 				height: 30%;
 			}
 			span {
 				font-family: 'Gilroy-Bold';
 				font-size: 32px;
+				@include breakpoint (md) {
+					font-size: 24px;
+				}
+				
 			}
 		}
 		font-size: 32px;
+		@include breakpoint (md) {
+			font-size: 24px;
+		}
 	}
 	&__item:last-child {
 		display: flex;
 		align-items: center;
+		@include breakpoint (md) {
+			justify-content: center;
+		}
 	}
 	&__button {
 		width: 200px;
 		height: 48px;
+		@include breakpoint (lg) {
+			width: 160px;
+		}
 		&_1 {
 			background-color: black;
 			color: #fff;
 			border-color: black;
 			margin-left: 100px;
+			@include breakpoint (md) {
+				margin-left: 0;
+			}
 		}
 		&_2 {
 			background-color:$orange;
@@ -361,12 +465,19 @@ body {
 		display: flex;
 		height: 370px;
 		margin-top: 70px;
+		@include breakpoint (md) {
+			height: 200px;
+			margin-top: 50px;
+		}
 	}
 	&__image {
 		background-image: url(../img/blog.svg);
 		width: 35%;
 		background-repeat: no-repeat;
 		background-size: cover;
+		@include breakpoint (md) {
+			background-position: left;
+		}
 	}
 	&__title {
 		justify-content: center;
@@ -384,16 +495,27 @@ body {
 		color: #fff;
 		&_name {
 			font-size: 14px;
+			@include breakpoint (md) {
+				font-size: 12px;
+			}
 		}
 		&_desc {
 			font-size: 48px;
 			margin-top: 27px;
+			@include breakpoint (md) {
+				font-size: 28px;
+				margin-top: 17px;
+			}
 		}
 		&_more {
 			font-size: 18px;
 			margin-top: 60px;
 			a {
 				color: #fff;
+			}
+			@include breakpoint (md) {
+				font-size: 10px;
+				margin-top: 30px;
 			}
 		}
 	}
@@ -409,6 +531,7 @@ body {
 }
 
 .article {
+	width: 50%;
 	margin-top: 40px;
 	display: flex;
 	justify-content: center;
@@ -421,15 +544,27 @@ body {
 		height: 80%;
 		display: flex;
 		flex-direction: column;
-		justify-content: space-around;
+		
 	}
 	&_name {
 		font-size: 24px;
 		font-family: 'Gilroy-Bold';
+		height: 40%;
+		@include breakpoint (md) {
+			font-size: 20px;
+		}
 	}
 	&_desc {
 		font-size: 18px;
 		margin-top: 16px;
+		height: 50%;
+		@include breakpoint (md) {
+			font-size: 14px;
+
+		}
+	}
+	&__more {
+		height: 10%;
 	}
 }
 
@@ -446,6 +581,9 @@ a {
 	margin-top: 80px;
 	@include breakpoint (lg) {
 		margin-top: 40px;
+	}
+	@include breakpoint (md) {
+		height: 310px;
 	}
 	.wrapper {
 		width: 80%;
@@ -469,10 +607,16 @@ a {
 				@include breakpoint (lg) {
 					font-size: 22px;
 				}
+				@include breakpoint (md) {
+					font-size: 14px;
+				}
 			}
 		}
 		.nav__item:not(:last-child) {
 			margin-right: 81px;
+			@include breakpoint (md) {
+				margin-right: 30px;
+			}
 		}
 	}
 	&__logo {
@@ -512,9 +656,118 @@ a {
 }
 
 .hr {
-	//margin-top: 50px;
 	width: 100%;
 	height: 1px;
 	background-color: black;
 }
 
+
+
+.nav-bar {
+	position: absolute;
+	background-color: $orange;
+	top: 0;
+	right: 100%;
+	height: 100vh;
+	width: 250px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: position 2.9s;
+	-webkit-transition: position 2.9s;
+	-moz-transition: position 2.9s;
+	-ms-transition: position 2.9s;
+	-o-transition: position 2.9s;
+}
+
+.toggle {
+	right: 0;
+	box-shadow: 1px 0 15px 2px rgba(0, 0, 0, 0.4);
+	z-index: 9999;
+}
+
+.toggle-menu {
+	background-color: rgba(247, 148, 30, 0.8);
+	width: 40px;
+	height: 30px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+    padding: 2px 2px 2px 3px;
+	border-radius: 5px;
+	cursor: pointer;
+	@include breakpoint (minmd) {
+		display: none;
+	}
+}
+
+.line {
+	width: 100%;
+	height: 3px;
+	border-radius: 5px;
+	background-color: #fff;
+	transition: transform 0.2s ease-out;
+	-webkit-transition: transform 0.2s ease-out;
+	-moz-transition: transform 0.2s ease-out;
+	-ms-transition: transform 0.2s ease-out;
+	-o-transition: transform 0.2s ease-out;
+}
+
+.toggle .line1 {
+	background-color: #000000;
+	transform: scale(0.9) rotateZ(-45deg) translate(-6px, 4px);
+}
+
+.toggle .line2 {
+	display: none;
+}
+
+.toggle .line3 {
+	background-color: #000000;
+	transform: scale(0.9) rotateZ(45deg) translate(-6px, -4px);
+}
+
+.toggle .toggle-menu {
+	background-color: white;
+}
+
+.nav-list {
+	list-style: none;
+	
+}
+
+.nav-list-item {
+	text-align: center;
+	padding: 10px 0;
+	text-transform: uppercase;
+	&:not(:last-child) {
+		padding-bottom: 50px;
+	}
+}
+
+.nav-link {
+	color: #fff;
+	text-decoration: none;
+}
+
+
+.nav-link::before {
+	position: absolute;
+	content: '';
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 1px;
+	background-color: #fff;
+	transform: scaleX(0);
+	transition: transform 0.4s ease-in-out;
+	transform-origin: left;
+	-webkit-transition: transform 0.4s ease-in-out;
+	-moz-transition: transform 0.4s ease-in-out;
+	-ms-transition: transform 0.4s ease-in-out;
+	-o-transition: transform 0.4s ease-in-out;
+}
+
+.nav-link:hover::before {
+	transform: scaleX(1);
+}

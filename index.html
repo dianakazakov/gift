@@ -11,10 +11,15 @@
     <div class="page">
         <header class="header">
             <div class="wrapper">
+                <div class="toggle-menu">
+                    <div class="line line1"></div>
+                    <div class="line line2"></div>
+                    <div class="line line3"></div>
+                </div>
                 <div class="header__item">
                     <a href="" class="logo">logo</a>
                 </div>
-                <div class="header__item">
+                <div class="header__item header__nav">
                     <ul class="nav">
                         <li class="nav__item"><a href="" class="nav__link">Home</a></li>
                         <li class="nav__item"><a href="" class="nav__link">About Us</a></li>
@@ -49,6 +54,7 @@
                 
             </div>
         </section>
+        
         <section class="gift">
             <div class="wrapper">
                 <div class="h2 gift__h2">
@@ -71,15 +77,15 @@
                         </div>
                     </div>
                     <div class="gift__item">
+                        <div class="gift__image gift3"></div>
                         <div class="gift__desc">
-                            <div class="gift__image gift3"></div>
                             <div class="gift__occasion">Valentine's Day</div>
                             <div class="gift__more"><a href="">See More ›</a></div>
                         </div>
                     </div>
                     <div class="gift__item">
+                        <div class="gift__image gift4"></div>
                         <div class="gift__desc">
-                            <div class="gift__image gift4"></div>
                             <div class="gift__occasion">Christmas</div>
                             <div class="gift__more"><a href="">See More ›</a></div>
                         </div>
@@ -162,5 +168,22 @@
             </div>
         </footer>
     </div>
+    <div class="nav-bar">
+        <ul class="nav-list">
+            <li class="nav-list-item"><a href="" class="nav-link">Home</a></li>
+            <li class="nav-list-item"><a href="" class="nav-link">About us</a></li>
+            <li class="nav-list-item">
+                <a href="" class="nav-link">Services</a>
+            </li>
+            <li class="nav-list-item"><a href="" class="nav-link">Blogs</a></li>
+        </ul>
+    </div>
+    <script>
+        var toggleButton = document.querySelector('.toggle-menu');
+var navBar = document.querySelector('.nav-bar');
+toggleButton.addEventListener('click', function () {
+	navBar.classList.toggle('toggle');
+});
+    </script>
 </body>
 </html>
