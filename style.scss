@@ -36,6 +36,9 @@
 	@include breakpoint (md) {
 		font-size: 12px;
 	}
+	@include breakpoint (xs) {
+		font-size: 10px;
+	}
 }
 
 body {
@@ -66,7 +69,7 @@ body {
 		}
 		&:last-child {
 			margin-right: 40px;
-			@include breakpoint (sm, md) {
+			@include breakpoint (md) {
 				margin-right: 0;
 			}
 		}
@@ -89,6 +92,9 @@ body {
 		@include breakpoint (md) {
 			width: 120px;
 			height: 35px;
+		}
+		@include breakpoint (xs) {
+			width: 110px;
 		}
 	}
 	&__nav {
@@ -138,6 +144,12 @@ body {
 	@include breakpoint (md) {
 		grid-template-rows: 300px;
 	}
+	@include breakpoint (sm) {
+		grid-template-rows: 200px;
+	}
+	@include breakpoint (sm) {
+		grid-template-rows: 150px;
+	}
 	&__item:first-child {
 		background-color: $gray2;
 		display: flex;
@@ -172,6 +184,14 @@ body {
 			line-height: 20px;
 			margin-bottom: 20px;
 		}
+		@include breakpoint (sm) {
+			margin-bottom: 40px;
+		}
+		@include breakpoint (xs) {
+			font-size: 15px;
+			line-height: 15px;
+			margin-bottom: 10px;
+		}
 	}
 	&__description {
 		font-size: 20px;
@@ -187,6 +207,9 @@ body {
 			line-height: 19px;
 			margin-bottom: 30px;
 		}
+		@include breakpoint (sm) {
+			display: none;
+		}
 	}
 	&__button {
 		background-color: $orange;
@@ -201,6 +224,10 @@ body {
 			width: 130px;
 			height: 35px;
 		}
+		@include breakpoint (xs) {
+			width: 100px;
+			height: 30px;
+		}
 	}
 }
 
@@ -213,6 +240,12 @@ body {
 	}
 	@include breakpoint (md) {
 		grid-template-rows: 300px;
+	}
+	@include breakpoint (sm) {
+		grid-template-rows: 200px;
+	}
+	@include breakpoint (sm) {
+		grid-template-rows: 150px;
 	}
 	&__item:first-child {
 		background-image: url(../img/more.svg);
@@ -243,6 +276,14 @@ body {
 		@include breakpoint (md) {
 			font-size: 20px;
 		}
+		@include breakpoint (sm) {
+			margin-top: 30px;
+		}
+		@include breakpoint (sm) {
+			margin-top: 20px;
+			font-size: 15px;
+			margin-bottom: 10px;
+		}
 	}
 	&__description {
 		font-size: 20px;
@@ -256,6 +297,9 @@ body {
 			font-size: 14px;
 			line-height: 16px;
 			margin-bottom: 15px;
+		}
+		@include breakpoint (sm) {
+			display: none;
 		}
 	}
 	&__button {
@@ -271,6 +315,10 @@ body {
 			width: 130px;
 			height: 45px;
 		}
+		@include breakpoint (xs) {
+			width: 100px;
+			height: 30px;
+		}
 	}
 }
 
@@ -278,10 +326,16 @@ body {
 	font-size: 32px;
 	text-align: center;
 	margin-bottom: 25px;
+	@include breakpoint (sm) {
+		font-size: 22px;
+	}
 }
 .offer {
 	font-size: 18px;
 	text-align: center;
+	@include breakpoint (sm) {
+		font-size: 14px;
+	}
 }
 
 .gift {
@@ -291,6 +345,9 @@ body {
 	}
 	@include breakpoint (md) {
 		height: 570px;
+	}
+	@include breakpoint (sm) {
+		height: 820px;
 	}
 	&__options {
 		display: grid;
@@ -306,8 +363,11 @@ body {
 			grid-template-rows: repeat(2, 150px);
 		}
 		@include breakpoint (sm) {
-			grid-template-rows: repeat(4, 200px);
+			grid-template-rows: repeat(4, 150px);
+			grid-template-columns: repeat(1, 1fr);
+			margin-top: 40px;
 		}
+		
 	}
 	.wrapper {
 		width: 80%;
@@ -316,7 +376,9 @@ body {
 		flex-direction: column;
 		align-items: center;
 		margin: 60px auto;
-		
+		@include breakpoint (sm) {
+			margin: 40px auto;
+		}
 	}
 	&__item {
 		width: 100%;
@@ -328,9 +390,6 @@ body {
 		}
 		@include breakpoint (lg) {
 			display: flex;
-		}
-		@include breakpoint (sm) {
-			display: block;
 		}
 	}
 	&__image {
@@ -386,7 +445,7 @@ body {
 	}
 	&__h2 {
 		font-size: 25px;
-	margin-bottom: 20px;
+		margin-bottom: 20px;
 	}
 }
 
@@ -397,6 +456,12 @@ body {
 	grid-template-rows: 240px;
 	@include breakpoint (md) {
 		grid-template-rows: 180px;
+	}
+	@include breakpoint (sm) {
+		grid-template-rows: 130px;
+	}
+	@include breakpoint (sm) {
+		grid-template-rows: 100px;
 	}
 	&__item:first-child {
 		display: flex;
@@ -410,18 +475,37 @@ body {
 				width: 80%;
 				height: 30%;
 			}
+			@include breakpoint (sm) {
+				width: 100%;
+				height: 10%;
+				text-align: center;
+			}
 			span {
 				font-family: 'Gilroy-Bold';
 				font-size: 32px;
 				@include breakpoint (md) {
 					font-size: 24px;
 				}
-				
+				@include breakpoint (sm) {
+					display: none;
+				}
+			}
+			br {
+				@include breakpoint (sm) {
+					display: none;
+				}
 			}
 		}
 		font-size: 32px;
 		@include breakpoint (md) {
 			font-size: 24px;
+		}
+		@include breakpoint (sm) {
+			font-size: 18px;
+			font-family: 'Gilroy-SemiBold';
+		}
+		@include breakpoint (xs) {
+			font-size: 14px;
 		}
 	}
 	&__item:last-child {
@@ -437,6 +521,9 @@ body {
 		@include breakpoint (lg) {
 			width: 160px;
 		}
+		@include breakpoint (xs) {
+			width: 120px;
+		}
 		&_1 {
 			background-color: black;
 			color: #fff;
@@ -450,6 +537,9 @@ body {
 			background-color:$orange;
 			color: black;
 			margin-left: 16px;
+			@include breakpoint (sm) {
+				display: none;
+			}
 		}
 	}
 }
@@ -469,6 +559,12 @@ body {
 			height: 200px;
 			margin-top: 50px;
 		}
+		@include breakpoint (sm) {
+			margin-top: 30px;
+		}
+		@include breakpoint (xs) {
+			height: 150px;
+		}
 	}
 	&__image {
 		background-image: url(../img/blog.svg);
@@ -477,6 +573,9 @@ body {
 		background-size: cover;
 		@include breakpoint (md) {
 			background-position: left;
+		}
+		@include breakpoint (xs) {
+			width: 60%;
 		}
 	}
 	&__title {
@@ -498,6 +597,9 @@ body {
 			@include breakpoint (md) {
 				font-size: 12px;
 			}
+			@include breakpoint (xs) {
+				font-size: 10px;
+			}
 		}
 		&_desc {
 			font-size: 48px;
@@ -505,6 +607,9 @@ body {
 			@include breakpoint (md) {
 				font-size: 28px;
 				margin-top: 17px;
+			}
+			@include breakpoint (xs) {
+				font-size: 14px;
 			}
 		}
 		&_more {
@@ -524,9 +629,15 @@ body {
 		justify-content: space-between;
 		gap: 30px;
 		height: 290px;
+		@include breakpoint (sm) {
+			display: none;
+		}
 	}
 	&__h2 {
 		margin-top: 80px;
+		@include breakpoint (sm) {
+			margin-top: 40px;
+		}
 	}
 }
 
@@ -560,7 +671,6 @@ body {
 		height: 50%;
 		@include breakpoint (md) {
 			font-size: 14px;
-
 		}
 	}
 	&__more {
@@ -585,6 +695,10 @@ a {
 	@include breakpoint (md) {
 		height: 310px;
 	}
+	@include breakpoint (sm) {
+		margin-top: 0;
+		height: 240px;
+	}
 	.wrapper {
 		width: 80%;
 		height: 80%;
@@ -601,6 +715,13 @@ a {
 		}
 		.nav {
 			margin: 0 auto;
+			@include breakpoint (sm) {
+				flex-direction: column;
+				align-items: center;
+			}
+			@include breakpoint (xs) {
+				display: none;
+			}
 			&__link {
 				font-size: 14px;
 				font-family: 'Gilroy-Bold';
@@ -617,12 +738,19 @@ a {
 			@include breakpoint (md) {
 				margin-right: 30px;
 			}
+			@include breakpoint (sm) {
+				margin-right: 0;
+				margin-bottom: 10px;
+			}
 		}
 	}
 	&__logo {
 		color: $orange;
 		@include breakpoint (lg) {
 			font-size: 22px;
+		}
+		@include breakpoint (xs) {
+			font-size: 18px;
 		}
 	}
 	&__icon {
