@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css">
     <title>Gift Store</title>
 </head>
 <body>
@@ -23,15 +24,39 @@
                     <ul class="nav">
                         <li class="nav__item"><a href="#" class="nav__link">Home</a></li>
                         <li class="nav__item"><a href="#" class="nav__link">About Us</a></li>
-                        <li class="nav__item"><a href="#" class="nav__link">Services</a></li>
+                        <li class="nav__item nav__parent"><a href="#" class="nav__link">Services</a>
+                        <ul class="submenu">
+                            <li class="submenu__item"><a href="#" class="submenu__link">Birthday</a>
+                            <ul class="submenu submenu_2">
+                                <li class="submenu__item">Winter</li>
+                                <li class="submenu__item">Spring</li>
+                                <li class="submenu__item">Summer</li>
+                                <li class="submenu__item">Autumn</li>
+                            </ul>
+                            </li>
+                            <li class="submenu__item"><a href="#" class="submenu__link">Anniversary</a></li>
+                            <li class="submenu__item"><a href="#" class="submenu__link">Valentine's Day</a></li>
+                            <li class="submenu__item"><a href="#" class="submenu__link">Christmas</a></li>
+                        </ul>
+                        </li>
                         <li class="nav__item"><a href="#" class="nav__link">Blogs</a></li>
                     </ul>
                 </div>
                 <div class="header__item">
-                    <button class="button header__button">gift finder</button>
+                    <button class="button header__button" data-fancybox="frame" data-src="#frame">gift finder</button>
                 </div>
             </div>
         </header>
+        <div id="frame">
+            <form class="form" action="#">
+                <div class="form__title">leave your contacts</div>
+                <input class="form__item" type="text" name="name" placeholder="Name" required />
+                <input class="form__item" type="email" name="email" placeholder="E-Mail" required />
+                <input class="form__item" type="tel" name="phone" placeholder="Phone number" required />
+                <button class="button form__button" type="submit">find gift</button>
+            </form>
+        </div>
+        
         <section class="find">
             <div class="find__item">
                 <div class="wrapper">
@@ -185,5 +210,7 @@ toggleButton.addEventListener('click', function () {
 	navBar.classList.toggle('toggle');
 });
     </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
 </body>
 </html>
